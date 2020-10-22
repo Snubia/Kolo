@@ -11,6 +11,8 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url("bcg.png") no-repeat fixed center;
+  background-color: #40E0D0;
 }
 
 #root {

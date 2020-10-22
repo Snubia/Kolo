@@ -1,10 +1,12 @@
 import bcrypt from 'bcryptjs';
 
+// adding sample users
+
 const data = {
   users: [{
-      name: 'Nubs',
-      email: 'admin@example.com',
-      password: bcrypt.hashSync('1234', 8),
+      name: 'Nunu',
+      email: 'sandrinenubia@icloud.com.com',
+      password: bcrypt.hashSync('Kolo1000', 8), // setting password
       isAdmin: true,
     },
     {
@@ -20,18 +22,18 @@ const data = {
       image: '/images/p1.jpg',
       price: 120,
       countInStock: 10,
-      brand: 'Nike',
+      brand: 'YSL',
       rating: 4.5,
       numReviews: 10,
       description: 'high quality product',
     },
     {
-      name: 'Adidas Fit Shirt',
+      name: 'Mesh Fit Shirt',
       category: 'Shirts',
       image: '/images/p2.jpg',
       price: 100,
       countInStock: 20,
-      brand: 'Adidas',
+      brand: 'Fenty',
       rating: 4.0,
       numReviews: 10,
       description: 'high quality product',

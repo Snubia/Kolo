@@ -15,11 +15,14 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/kolo', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+// mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/kolo', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true,
+// });
+
+const MONGODB_URI = 'mongodb+srv://Nunu:Kolo1000@kolo.64wet.mongodb.net/kolo';
+
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
@@ -39,7 +42,22 @@ app.use((err, req, res, next) => {
   });
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Serve at http://localhost:${port}`);
-});
+// const port = process.env.PORT || 5000;
+// app.listen(port, () => {
+//   console.log(`Serve at http://localhost:${port}`);
+// });
+
+
+mongoose
+  .connect(MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+
+  .then(result => {
+    app.listen(process.env.PORT || 5000);
+  })
+  .catch(err => {
+    console.log(err);
+  });
