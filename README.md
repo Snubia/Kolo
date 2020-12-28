@@ -24,4 +24,4 @@ To get products from back end and dispash them (needs a type). (state and Reduce
 
 **Redux Thunk**
 
-Tosend AJAX Request to the action
+To send AJAX Request to the action
