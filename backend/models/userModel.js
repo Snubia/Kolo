@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-// Creating the user admin
+// Creating the user admin schema
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
